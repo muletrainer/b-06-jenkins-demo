@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:email="http://www.mulesoft.org/schema/mule/email" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="ba8ff694-4fb2-444b-8ebd-613d130476c5" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="a-first-exampleFlow" doc:id="9ef20ff5-87fc-4127-a767-8b9b679088c2" >
+		<http:listener doc:name="Listener" doc:id="8eb612a5-a595-4c66-88c4-445145da31cf" config-ref="HTTP_Listener_config" path="/hi"/>
+		<logger level="INFO" doc:name="Logger" doc:id="31c7eb8e-cf80-4222-b85e-538d88062d1c" message="----- request recevied ----"/>
+		<set-payload value="Hi, Welcome to Mule !!" doc:name="Set Payload" doc:id="4f8ce614-3c39-4c1e-8dff-a44c4c15c49a" />
+		<logger level="INFO" doc:name="Logger" doc:id="c00ac67c-9827-4294-ae36-c448d8ebd350" message="----- request processing completed --- ----"/>
+	</flow>
+</mule>
