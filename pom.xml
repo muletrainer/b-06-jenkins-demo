@@ -43,7 +43,7 @@
 		                 <muleVersion>4.3.0</muleVersion>
 		                 <username>kish0321</username>
 		                 <password>Kish0321</password>
-		                 <applicationName>a-first-app-mmp</applicationName>
+		                 <applicationName>app-202101-0915</applicationName>
 		                 <environment>Sandbox</environment>
 		                 <region>us-east-1</region>
 		                 <workers>1</workers>
